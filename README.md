@@ -27,6 +27,10 @@ XGBoost com hiperparâmetros escolhidos pela PR-AUC e limiar de decisão 0,8 rec
 - A regressão logística `balanced` tem o maior recall, mas só ~6% dos alertas eram fraude de verdade, o que a torna inviável na prática.
 - O XGBoost teve o melhor equilíbrio e a maior PR-AUC. Contra o Random Forest, a diferença de recall é de apenas 2 fraudes (81 contra 79), num teste com 98 fraudes.
 - A curva ROC quase não separa os modelos (AUC de 0,96 a 0,98), enquanto a curva Precisão x Recall separa bem, porque ignora o grande volume de transações normais.
+<p align="center">
+  <img src="roc.png" width="45%" alt="Curva ROC">
+  <img src="precision_recall.png" width="45%" alt="Curva Precisão x Recall">
+</p>
 
 ## 4. Limiar de decisão e SHAP
 - **Limiar escolhido: 0,8**, o de maior F1 (0,8617) na tabela de 0,1 a 0,9, com recall de 0,8265 e precisão de 0,9000. Baixar para 0,1 sobe o recall para 0,8571, mas a precisão cai para 0,7778.
